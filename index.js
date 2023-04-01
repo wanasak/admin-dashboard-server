@@ -15,7 +15,14 @@ import User from './models/User.js'
 import Product from './models/Product.js'
 import ProductStat from './models/ProductStat.js'
 import Transaction from './models/Transaction.js'
-import { dataUser, dataProduct, dataProductStat, dataTransaction } from './data/data.js'
+import OverallStat from './models/OverallStat.js'
+import {
+    dataUser,
+    dataProduct,
+    dataProductStat,
+    dataTransaction,
+    dataOverallStat
+} from './data/data.js'
 
 // CONFIGURATION
 dotenv.config()
@@ -48,6 +55,7 @@ mongoose.connect(process.env.MONGO_URL, {
 
     // ONLY ADD DATA ONE TIME
     // Product.insertMany(dataProduct);
+    // OverallStat.insertMany(dataOverallStat);
     // ProductStat.insertMany(dataProductStat);
     // User.insertMany(dataUser)
     // Transaction.insertMany(dataTransaction)
